@@ -2,12 +2,6 @@
 // bin/ed.php
 // 202012201900
 
-// Text previous terminal.
-$text_terminal = $text_all . "\n$ " . $cmd_all;
-
-$content_terminal = $text_all;
-$content_command = $cmd_all;
-
 // Date and time now.
 date_default_timezone_set($def_user_timezone);
 $date_current = date("YmdHi");
