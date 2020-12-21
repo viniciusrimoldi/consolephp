@@ -1,9 +1,7 @@
 <?php
-// echo
+// bin/echo.php
 // 202012181445
 
-// Text previous terminal.
-$text_terminal = $text_all . "\n$ " . $cmd_all;
+return $content_terminal . "\n$" . $content_command .  "\n" . $cmd[1];
 
-return $text_terminal .  "\n" . $cmd[1];
 ?>
