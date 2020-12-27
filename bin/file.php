@@ -4,6 +4,14 @@
 
 $args = explode(" ", $cmd[1]);  //explode commands.
 switch ($args[0]) {
+    case "help":  //help message.
+        $result = "Usage: file [OPTION] [FILE]" .
+                "\nOptions:" .
+                "\n    download [FILE]" .
+                "\n    status   [FILE]" .
+                "\n";
+        break;
+        
     case "download":  //download file server to client.
         
         $file_path = $dir_user . $args[1];  //path to check file exists in server.
