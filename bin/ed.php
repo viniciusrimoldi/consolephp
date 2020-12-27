@@ -39,14 +39,14 @@ function f_read($file_a, $file_b) {
 
 // Funcao que executa os comandos internos.
 function f_exec_internal($arg_a, $arg_b) {
-    if (preg_match("#\.ed\.run\.internal\[\[save\]\]#", $GLOBALS['content_terminal'])) {
+    if (preg_match("#\.ed\.exec\.internal\[\[save\]\]#", $GLOBALS['content_terminal'])) {
         preg_match("#(\.ed\.file\.path\[\[).*?(\]\])#", $GLOBALS['content_terminal'], $find_path_name);
         $path_name_temp = explode('[[', $find_path_name[0]);
         $path_name_finish = explode(']]', $path_name_temp[1]);
      
         $result = f_write($path_name_finish[0], 0);
      
-        $msg_log = ".ed.info.comment[[Run internal commands! (" . $GLOBALS['date_current'] . ")]]\n";
+        $msg_log = ".ed.info.comment[[Execute internal commands! (" . $GLOBALS['date_current'] . ")]]\n";
         f_logs($msg_log); //write message logs.
     }
 
