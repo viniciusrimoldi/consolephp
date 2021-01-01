@@ -17,7 +17,7 @@ $url_transl = $url_base . "&sl=" . $source_lang . "&tl=" . $transl_lang ."&dt=t"
 $content_url = file_get_contents($url_transl);  //capture source page translate with data.
 
 $json_content = json_decode($content_url);      //convert json to array.
-$json_from = $json_content[0][0][1];            //text original.
+$json_from = iconv("UTF-8", "ISO-8859-1", $json_content[0][0][1]);            //text original.
 $json_to = $json_content[0][0][0];              //text tranlated.
 
 $result = "  ORIGIN: " . $json_from . "\n  TRANSL: " . $json_to . "\n";
